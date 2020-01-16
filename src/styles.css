@@ -1,0 +1,85 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+.isLoading .loadingText {
+    letter-spacing: 10px;
+    opacity: 1;
+}
+
+.loadingText {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: calc(50% - 50px);
+    text-align: center;
+    letter-spacing: 11px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity .5s ease-out, letter-spacing .5s ease-out;
+    pointer-events: none;
+}
+
+#container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+/* Button Panel */
+#buttonContainer {
+	bottom: 0%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: flex-end;
+	-ms-flex-align: flex-end;
+	align-items: flex-end;
+	-ms-flex-line-pack: center;
+	/* align-content: center; */
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: 100vh;
+	transition: bottom 2s ease;
+}
+
+.isLoading #buttonContainer {
+	bottom: -100%;
+}
+
+.button {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	color: #c5b7c3;
+}
+
+.button:hover {
+	cursor: pointer;
+	color: #ffffff;
+}
